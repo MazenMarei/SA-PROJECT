@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Protest+Guerrilla&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Prata&family=Protest+Guerrilla&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --heading-font: "Prata", Georgia, serif;
   --heading-font-weight: 400;
@@ -27,13 +23,14 @@ body {
 }
 
 .shopping-bag {
-  min-height: 100px;
-  min-width: 90px;
-  max-width: 90px;
-  max-height: 100px;
+  min-height: 28px;
+  min-width: 25px;
 
-  border: solid 5px var(--dark-icon-color);
-  border-radius: 10px;
+  max-width: 25px;
+  max-height: 28px;
+
+  border: solid 2px;
+  border-radius: 3px;
   position: relative;
 
   display: flex;
@@ -41,12 +38,22 @@ body {
   align-items: center;
   font-size: 50px;
   font-weight: 700;
-  color: var(--dark-icon-color);
+  transition: all 0.5s;
+}
+
+.shopping-bag:hover {
+  background-color: var(--dark-icon-color);
+  transition: all 0.5s;
+  & span {
+    color: var(--light-color);
+    transition: all 2s;
+  }
 }
 
 .shopping-bag span {
   overflow: hidden;
   white-space: nowrap;
+  transition: all 2s;
 }
 
 .shopping-bag::after {
@@ -54,10 +61,10 @@ body {
   content: "";
   top: 10%;
   right: 50%;
-  width: 30px;
-  height: 30px;
+  width: 12px;
+  height: 12px;
   transform: translate(50%, -100%);
-  border: solid 5px var(--dark-icon-color);
+  border: solid 2px;
   border-bottom: none;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
@@ -97,21 +104,19 @@ body {
 }
 
 .accent-bg {
-    background-color: var(--accent-color) !important;
+  background-color: var(--accent-color) !important;
 }
 
 .secondary-bg {
-    background-color: var(--secondary-color) !important;
+  background-color: var(--secondary-color) !important;
 }
 
 .dark-bg {
-    background-color: var(--dark-color) !important;
+  background-color: var(--dark-color) !important;
 }
 
 .light-bg {
-    background-color: var(--light-color) !important;
+  background-color: var(--light-color) !important;
 }
-
-
 
 /* -------------------------- important css classes ------------------------- */

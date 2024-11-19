@@ -7,61 +7,105 @@
   </head>
   <!-- -------------------- importing bootstrap css file --------------------- -->
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-  <!-- -------------------- importing fontawesome css file --------------------- -->
+  <!-- -------------------- importing font awesome css file --------------------- -->
   <link rel="stylesheet" href="./assets/css/all.min.css" />
 
   <!-- -------------------- importing custom css file --------------------- -->
   <link rel="stylesheet" href="./assets/css/style.css" />
 
   <body>
-
     <!-- --------------------------- navbar section ---------------------------- -->
-    <section id="navbar">
-      <!-- ----------------------------- top navbar ------------------------------ -->
-      <div class="navbar navbar-expand-lg">
-        <div class="container-fluid p-3 w-100">
-          <div class="row w-100">
-            <!-- ------------------------ social links section ------------------------- -->
+    <nav id="navBar">
+      <div class="container-fuild p-3">
+        <!-- ----------------------------- top navbar ------------------------------ -->
+        <div class="row px-lg-4 border-bottom">
+          <!-- --------------------- social media icons section ---------------------- -->
+          <div class="col-md-6 px-lg-5">
+            <ul class="d-flex flex-row gap-4 list-unstyled">
+              <li>
+                <a href="#" class="dark-icon-color"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="dark-icon-color"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="dark-icon-color"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#" class="dark-icon-color"
+                  ><i class="fab fa-behance-square"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
 
-            <div class="col-md-6">
-              <div class="social-links">
-                <ul class="list-unstyled d-flex flex-row gap-3">
-                  <li>
-                    <a href="#" class="dark-icon-color"><i class="fab fa-facebook-f"></i></a>
-                  </li>
-                  <li>
-                    <a href="#" class="dark-icon-color"><i class="fab fa-twitter"></i></a>
-                  </li>
-                  <li class="">
-                    <a href="#" class="dark-icon-color"><i class="fab fa-youtube"></i></a>
-                  </li>
-                  <li>
-                    <a href="#" class="dark-icon-color"><i class="fab fa-behance-square"></i></a>
-                  </li>
-                </ul>
-              </div>
+          <!-- --------------------- user and cart section ---------------------- -->
+          <div class="col-md-6 px-lg-5">
+            <ul class="d-flex flex-row justify-content-end gap-4 list-unstyled">
+              <li>
+                <button class="btn border-0 fs-5 dark-icon-color">
+                  <i class="fas fa-user"></i>
+                </button>
+              </li>
+              <li>
+                <button class="btn border-0">
+                  <div class="shopping-bag dark-icon-color">
+                    <span id="cartCount" class="fs-6">0</span>
+                  </div>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ----------------------- bottom and main navbar ------------------------ -->
+        <div class="row p-3 px-lg-5 border-bottom navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a href="index.html" class="navbar-brand">
+              <img src="./assets/images/logo.png" alt="logo" />
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarText"
+              aria-controls="navbarText"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+              </ul>
             </div>
-
-
           </div>
         </div>
       </div>
-
-      <!-- ----------------------------- main navbar ------------------------------ -->
-      <!-- <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="./assets/images/logo.png" alt="logo" />
-          </a>
-            
-        </div>
-      </nav> -->
-    </section>
-
+    </nav>
 
     <!-- -------------------- importing bootstrap js file --------------------- -->
     <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- -------------------- importing fontawesome js file --------------------- -->
+    <!-- -------------------- importing font awesome js file --------------------- -->
     <script src="./assets/js/all.min.js"></script>
     <!-- -------------------- importing custom js file --------------------- -->
     <script src="./assets/js/main.js"></script>
