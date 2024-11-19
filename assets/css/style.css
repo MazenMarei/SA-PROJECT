@@ -20,6 +20,7 @@
 body {
   font-family: var(--body-font);
   background-color: var(--light-color);
+  background-color: rgb(204, 201, 197);
 }
 
 .shopping-bag {
@@ -119,4 +120,75 @@ body {
   background-color: var(--light-color) !important;
 }
 
+
 /* -------------------------- important css classes ------------------------- */
+
+/* --------------------------  best selling books ------------------------- */
+
+#bestSellingBooks{
+  background-color:rgb(204, 201, 197);
+  background: #EDEBE4;
+    padding: 120px 0;
+}
+.product-entry {
+  margin: 0;
+  padding: 0;
+}
+.best-img{
+  display: inline-block;
+    border: 0;
+    max-width: 105%;
+    height: 500px;
+    vertical-align: middle;
+}
+#bestSellingBooks .product-entry {
+    margin-top: 50px;
+    margin-left: 8px;
+}
+
+
+.section-title {
+    font-family: "Georgia Ref";
+    font-size: 45px;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.customUnderline{
+  border-bottom: 3px solid rgba(102,98,47,255);
+;
+  padding-bottom: 2px;
+}
+.author-name{
+  margin-bottom: 25px;
+}
+.item-title{
+  font-family: "Georgia Ref";
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.txt{
+    word-spacing: 3px; 
+    padding-bottom: 30px;
+}
+.item-price{
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: rgba(102,98,47,255);
+}
+.shop-btn{
+  color: black;
+  transition: all 0.3s ease;
+}
+.shop-btn:hover{
+  color: rgba(102,98,47,255); 
+}
+.shop-btn svg{
+  margin-left: 10px;
+  transition: 0.6s ease;
+}
+.shop-btn:hover svg{
+  margin-left: 19px;
+  transition: 0.6s ease;
+}
