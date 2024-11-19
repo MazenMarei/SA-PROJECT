@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Protest+Guerrilla&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Prata&family=Protest+Guerrilla&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
+@import url(animations.css);
+
+/* -------------------------- important css variables ------------------------- */
 :root {
   --heading-font: "Prata", Georgia, serif;
   --heading-font-weight: 400;
@@ -15,6 +18,8 @@
   --light-text-color: #afafaf;
   --dark-text-color: #2f2f2f;
   --dark-icon-color: #555;
+
+  --active-color: #daa556;
 }
 
 body {
@@ -22,6 +27,8 @@ body {
   background-color: var(--light-color);
 }
 
+
+/* ------------------- custom design for shopping bag icon ------------------ */
 .shopping-bag {
   min-height: 28px;
   min-width: 25px;
@@ -103,6 +110,19 @@ body {
   color: var(--dark-icon-color) !important;
 }
 
+.active-color {
+  color: var(--active-color) !important;
+}
+
+.accent-color-hover {
+  transition: all 0.5s;
+}
+
+.accent-color-hover:hover {
+  color: var(--accent-color) !important;
+  transition: all 0.5s;
+}
+
 .accent-bg {
   background-color: var(--accent-color) !important;
 }
@@ -119,4 +139,38 @@ body {
   background-color: var(--light-color) !important;
 }
 
-/* -------------------------- important css classes ------------------------- */
+.nav-item-hover {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-item-hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+}
+
+.nav-item-hover.expandToLeft::after {
+  animation: expandToLeft 0.5s forwards;
+}
+
+.nav-item-hover.collapseToRight::after {
+  animation: collapseToRight 0.5s forwards;
+}
+
+.nav-item-hover.expandToRight::after {
+  animation: expandToRight 0.5s forwards;
+}
+
+.nav-item-hover.collapseToLeft::after {
+  animation: collapseToLeft 0.5s forwards;
+}
+
+
+
+
