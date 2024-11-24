@@ -15,105 +15,133 @@
 
   <body>
     <!-- --------------------------- navbar section ---------------------------- -->
-    <nav id="navBar">
-      <div class="container-fuild p-3">
-        <!-- ----------------------------- top navbar ------------------------------ -->
-        <div class="row px-lg-4 border-bottom">
-          <!-- --------------------- social media icons section ---------------------- -->
-          <div class="col-6 px-lg-5">
-            <ul class="d-flex flex-row gap-4 list-unstyled">
-              <li>
-                <a href="#" class="dark-icon-color"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#" class="dark-icon-color"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#" class="dark-icon-color"
-                  ><i class="fab fa-youtube"></i
-                ></a>
-              </li>
-              <li>
-                <a href="#" class="dark-icon-color"
-                  ><i class="fab fa-behance-square"></i
-                ></a>
-              </li>
-            </ul>
-          </div>
 
-          <!-- --------------------- user and cart section ---------------------- -->
-          <div class="col-6 px-lg-5">
-            <ul class="d-flex flex-row justify-content-end gap-4 list-unstyled">
-              <li>
-                <button class="btn border-0 fs-5 dark-icon-color p-0">
-                  <i class="fas fa-user"></i>
-                </button>
-              </li>
-              <li>
-                <button class="btn border-0">
-                  <div class="shopping-bag dark-icon-color">
-                    <span id="cartCount" class="fs-6">0</span>
-                  </div>
-                </button>
-              </li>
-            </ul>
-          </div>
+    <!-- ----------------------------- top navbar ------------------------------ -->
+    <div class="container-fuild p-3">
+      <!-- ----------------------------- top navbar ------------------------------ -->
+      <div class="row px-lg-4 border-bottom">
+        <!-- --------------------- social media icons section ---------------------- -->
+        <div class="col-6 px-lg-5">
+          <ul class="d-flex flex-row gap-4 list-unstyled">
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-behance-square"></i
+              ></a>
+            </li>
+          </ul>
         </div>
 
-        <!-- ----------------------- bottom and main navbar ------------------------ -->
-        <div class="row p-3 px-lg-5 border-bottom navbar navbar-expand-lg">
-          <div class="container-fluid">
-            
-            <a href="index.html" class="navbar-brand">
-              <img src="./assets/images/logo.png" alt="logo" />
-            </a>
+        <!-- --------------------- user and cart section ---------------------- -->
+        <div class="col-6 px-lg-5">
+          <ul class="d-flex flex-row justify-content-end gap-4 list-unstyled">
+            <li>
+              <button class="btn border-0 fs-5 dark-icon-color p-0">
+                <i class="fas fa-user"></i>
+              </button>
+            </li>
 
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarText"
-              aria-controls="navbarText"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <li>
+              <button class="btn border-0">
+                <div class="shopping-bag dark-icon-color">
+                  <span id="cartCount" class="fs-6">0</span>
+                </div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-            <div>
-              <div class="collapse navbar-collapse" id="navbarText">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fs-5 ">
-                  <li class="nav-item">
-                    <a class="nav-link body-text-color active-color nav-item-hover" aria-current="page" href="#"
-                      >Home</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link body-text-color accent-color-hover nav-item-hover" href="#">Books</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link body-text-color accent-color-hover nav-item-hover" href="#">Featured</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link body-text-color accent-color-hover nav-item-hover" href="#">Popular</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link body-text-color accent-color-hover nav-item-hover" href="#">Offer</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link body-text-color accent-color-hover nav-item-hover" href="#">Contact us</a>
-                  </li>
-                </ul>
-              </div>
+    <!-- ----------------------- bottom and main navbar ------------------------ -->
+    <div class="container-fuild p-3 sticky-top">
+      <div class="row p-3 px-lg-5 border-bottom navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- --------------------- logo section ---------------------- -->
+          <a href="index.html" class="navbar-brand">
+            <img src="./assets/images/logo.png" alt="logo" />
+          </a>
+
+          <!-- ----------------------- navbar collapse button ------------------------ -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- ---------------------------- navbar items ----------------------------- -->
+          <div>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fs-5">
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color active-color nav-item-hover"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Books</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Featured</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Popular</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Offer</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
 
     <!-- -------------------- importing bootstrap js file --------------------- -->
     <script src="./assets/js/bootstrap.min.js"></script>

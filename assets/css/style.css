@@ -25,9 +25,14 @@
 body {
   font-family: var(--body-font);
   background-color: var(--light-color);
+  height: 200vh;
 }
 
-
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+}
 /* ------------------- custom design for shopping bag icon ------------------ */
 .shopping-bag {
   min-height: 28px;
