@@ -1,4 +1,4 @@
-// tabs
+// TABS CHANGING
 document.addEventListener("DOMContentLoaded", function () {
   // Get all the tab buttons
     const tabs = document.querySelectorAll('.tabs .tab');
@@ -17,3 +17,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 });
+
+// FADE UP ANIMATION
+const fadeUpElements = document.querySelectorAll('.fade-up');
+
+// function to check visibility
+const handleScroll = () => {
+  fadeUpElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible'); // Add the "visible" class to trigger the animation
+    }
+  });
+};
+// Run the handler on scroll and load
+window.addEventListener('scroll', handleScroll);
+window.addEventListener('load', handleScroll);
