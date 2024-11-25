@@ -378,10 +378,10 @@ figcaption {
     width: 50px;
 } */
 
-/* fade up animation */
+/*      fade up animation   */
 .fade-up {
   opacity: 0;
-  transform: translateY(40px);
+  transform: translateY(60px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -389,6 +389,7 @@ figcaption {
   opacity: 1;
   transform: translateY(0);
 }
+/*   -------------------------- end of fade up animation ------------------------- */ 
 
 #quotation q{
   display: block;
@@ -419,3 +420,24 @@ q::after {
   text-transform: uppercase;
 }
 
+#special-offer .section-header {
+    padding: 140px 0 220px;
+    margin-bottom: -235px;
+    /* z-index: -1; */
+}  
+
+.section-title {
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 75px;
+}
+
+span.prev-price{
+  color: rgb(148, 142, 133);
+  text-decoration-color: initial;
+    font-size: 0.8em;
+    padding-right: 10px;
+    text-decoration: line-through;
+}
