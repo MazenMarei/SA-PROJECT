@@ -225,3 +225,26 @@ body {
   border-color: var(--accent-color) !important;
   transition: border-color 1s;
 }
+
+.around-hr-line::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 23vw;
+  height: 1px;
+  background-color: var(--light-text-color);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.around-hr-line::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 23vw;
+  height: 1px;
+  background-color: var(--light-text-color);
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
