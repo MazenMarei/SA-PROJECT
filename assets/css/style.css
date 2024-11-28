@@ -30,7 +30,6 @@ body {
   font-family: var(--body-font);
   background-color: var(--light-color);
   color: var(--body-text-color);
-  height: 200vh;
 }
 
 /* ------------------- custom design for shopping bag icon ------------------ */
@@ -152,6 +151,7 @@ body {
   background-color: var(--light-color) !important;
 }
 
+
 .nav-item-hover {
   position: relative;
   display: inline-block;
@@ -247,4 +247,331 @@ body {
   top: 50%;
   right: 0;
   transform: translateY(-50%);
+}
+/* -------------------------- important css classes ------------------------- */
+
+
+
+
+
+/* ------------------------ start of hossny css code ------------------------ */
+
+
+/* --------------------------  best selling books ------------------------- */
+
+#bestSellingBooks{
+  background: #EDEBE4;
+  padding: 120px 0;
+}
+.product-entry {
+  margin: 0;
+  padding: 0;
+}
+.best-img{
+  display: inline-block;
+    border: 0;
+    max-width: 105%;
+    height: 500px;
+    vertical-align: middle;
+}
+#bestSellingBooks .product-entry {
+    margin-top: 50px;
+    margin-left: 8px;
+}
+
+
+.section-title {
+    font-family: "Georgia Ref";
+    font-size: 45px;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.customUnderline{
+  border-bottom: 3px solid rgba(102,98,47,255);
+;
+  padding-bottom: 2px;
+}
+.author-name{
+  margin-bottom: 25px;
+}
+.item-title{
+  font-family: "Georgia Ref";
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+.txt{
+    word-spacing: 3px; 
+    padding-bottom: 30px;
+}
+.item-price{
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: rgba(102,98,47,255);
+}
+.shop-btn{
+  color: black;
+  transition: all 0.3s ease;
+}
+.shop-btn:hover{
+  color: rgba(102,98,47,255); 
+}
+.shop-btn svg{
+  margin-left: 10px;
+  transition: 0.6s ease;
+}
+.shop-btn:hover svg{
+  margin-left: 19px;
+  transition: 0.6s ease;
+}
+/* --------------------------  best selling books ------------------------- */
+
+
+/* --------------------------  popular books ------------------------- */
+/* --------------------------  tabs ------------------------- */
+.section-header{
+  position: relative;
+}
+.align-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.section-header .title span{
+  color: rgb(164, 159, 151);
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.section-title {
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 75px;
+}
+
+.tabs{
+    list-style-image: initial;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 55px 0;
+    justify-content: center;
+    list-style: none;
+}
+
+.tabs .tab{
+  font-weight: 600;
+  margin-right: 50px;
+  cursor: pointer;
+  color: rgb(124, 74, 0);
+}
+.tabs .tab.active, .tabs .tab:hover{
+  color: rgb(36 ,39, 41);
+  border-bottom: 2px solid #8A884c;
+}
+
+ul li, ol li {
+    margin-bottom: 5px;
+    outline: 0;
+}
+/* --------------------------  tabs ------------------------- */
+
+/* --------------------------  tabs content ------------------------- */
+.tab-content{
+  position: relative;
+}
+/* *,*::before,*::after{
+  box-sizing: border-box;
+} */
+.active[data-tab-content] {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+.tab-content {
+  display: block;
+}
+
+.tab-content > div {
+  display: none;
+}
+
+.tab-content > .active {
+  display: block;
+}
+
+
+/* image */
+.product-style{
+  position: relative;
+  overflow: hidden;
+}
+figure{
+  margin-bottom: 0;
+}
+.product-style img.product-item {
+    background-image: initial;
+    background-color: rgb(206, 204, 199);
+    border-color: rgb(201, 198, 194);
+}
+.product-style img.product-item {
+    position: relative;
+    background: #EFEEE8;
+    border: 1px solid #EAE8DF;
+    padding: 15%;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+img{
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/* button */
+.product-style:hover button.add-to-cart {
+  bottom: 0;
+}
+
+.product-style button.add-to-cart {
+    background-image: initial;
+    background-color: rgb(24, 26, 27);
+    color: rgb(220, 218, 215);
+}
+.product-style button.add-to-cart {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 3;
+    bottom: -65px;
+    left: 0;
+    z-index: 9;
+    transition: 0.3s ease-out;
+}
+
+/* figcaption */
+figcaption {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* h3 */
+.product-item figcaption > h3 {
+    color: rgb(115, 102, 59);
+    text-align: center;
+    font-size: 1.4em;
+    margin: 0;
+}
+.product-item figcaption >span{
+  display: block;
+  font-size: 18px;
+  text-align: center;
+}
+.product-item figcaption>h3 {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.product-item .item-price {
+    color: rgb(115, 102, 59);
+    font-size: 1.5em;
+    text-align: center;
+}
+/* -------------------------- end of tabs content ------------------------- */
+
+/* --------------------------  quotation section ------------------------- */
+.section-title.divider {
+  width: 100%;
+}
+.section-title{
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+}
+/* to be continued */
+/* 
+.section-title.divider::after {
+    content: "";
+    border-bottom: 3px solid #74642F;
+    position: absolute;
+    right: 0;
+    bottom: -16px;
+    left: 0;
+    width: 50px;
+} */
+
+/*      fade up animation   */
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*   -------------------------- end of fade up animation ------------------------- */ 
+
+#quotation q{
+  display: block;
+  max-width: 600px; /* Limit the width of the container */
+  margin: -35px  auto; /* Center the container horizontally */
+  text-align: center; 
+  line-height: 1.6; /* Adjust line height for readability */
+  font-size: 1.6em; 
+  color: #333;
+  padding: 0 40px 60px 40px;
+}
+
+q::before {
+    content: open-quote;
+}
+q::after {
+    content: close-quote;
+}
+#quotation .author-name{
+    font-family: "Prata", Georgia, serif;
+    font-size: 1.4em;
+}
+/* -------------------------- end of quotation section ------------------------- */
+
+.section-header .title span{
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+#special-offer .section-header {
+    padding: 140px 0 220px;
+    margin-bottom: -235px;
+    /* z-index: -1; */
+}  
+
+.section-title {
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1;
+    position: relative;
+    margin-bottom: 75px;
+}
+
+span.prev-price{
+  color: rgb(148, 142, 133);
+  text-decoration-color: initial;
+    font-size: 0.8em;
+    padding-right: 10px;
+    text-decoration: line-through;
 }
