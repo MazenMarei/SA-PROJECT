@@ -17,7 +17,7 @@
     <!-- --------------------------- navbar section ---------------------------- -->
 
     <!-- ----------------------------- top navbar ------------------------------ -->
-    <div class="container-fuild p-3">
+    <div class="container-fuild p-3 pb-0">
       <!-- ----------------------------- top navbar ------------------------------ -->
       <div class="row px-lg-4 border-bottom">
         <!-- --------------------- social media icons section ---------------------- -->
@@ -50,7 +50,11 @@
         <div class="col-6 px-lg-5">
           <ul class="d-flex flex-row justify-content-end gap-4 list-unstyled">
             <li>
-              <button class="btn border-0 fs-5 dark-icon-color p-0">
+              <button
+                class="btn border-0 fs-5 dark-icon-color p-0"
+                data-bs-toggle="modal"
+                data-bs-target="#loginAndRegisterModal"
+              >
                 <i class="fas fa-user"></i>
               </button>
             </li>
@@ -68,7 +72,7 @@
     </div>
 
     <!-- ----------------------- bottom and main navbar ------------------------ -->
-    <div class="container-fuild p-3 sticky-top">
+    <nav class="container-fuild p-3 py-0 sticky-top light-bg">
       <div class="row p-3 px-lg-5 border-bottom navbar navbar-expand-lg">
         <div class="container-fluid">
           <!-- --------------------- logo section ---------------------- -->
@@ -137,6 +141,563 @@
                   >
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- --------------------------- slider section ---------------------------- -->
+    <section id="featuredSlider" class="position-relative w-100">
+      <div class="container">
+        <div class="row">
+          <div
+            id="carouselExampleFade"
+            class="carousel slide carousel-fade"
+            data-bs-touch="true"
+          >
+            <div class="carousel-inner">
+              <!-- ----------------------------- slider item ----------------------------- -->
+              <div class="carousel-item active">
+                <div class="featured-item-container position-relative py-5">
+                  <div class="row mt-4">
+                    <div
+                      class="col-md-6 d-flex flex-column justify-content-center order-md-0 order-1 pt-5 pt-md-0"
+                    >
+                      <div
+                        class="px-md-5 text-center text-md-start pt-5 pt-md-0"
+                      >
+                        <h1
+                          class="text-capitalize m-5 ms-0 mt-0 lh-base text-black"
+                        >
+                          Life of the Wild
+                        </h1>
+                        <p class="me-5 lh-lg">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Sed eu feugiat amet, libero ipsum enim pharetra
+                          hac. Urna commodo, lacus ut magna velit eleifend.
+                          Amet, quis urna.
+                        </p>
+                        <a
+                          href="#"
+                          class="btn me-5 border border-2 rounded-0 accent-color text-uppercase fw-semibold p-2 px-3 read-more-btn"
+                        >
+                          read more <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="col-md-6 d-flex flex-row justify-content-center order-md-1 order-0"
+                    >
+                      <img src="./assets/images/main-banner1.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ----------------------------- slider item ----------------------------- -->
+              <div class="carousel-item">
+                <div class="featured-item-container py-5">
+                  <div class="row mt-4">
+                    <div
+                      class="col-md-6 d-flex flex-column justify-content-center order-md-0 order-1 pt-5 pt-md-0"
+                    >
+                      <div
+                        class="px-md-5 text-center text-md-start pt-5 pt-md-0"
+                      >
+                        <h1
+                          class="text-capitalize m-5 ms-0 mt-0 lh-base text-black"
+                        >
+                          Birds gonna be Happy
+                        </h1>
+                        <p class="me-5 lh-lg">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Sed eu feugiat amet, libero ipsum enim pharetra
+                          hac. Urna commodo, lacus ut magna velit eleifend.
+                          Amet, quis urna.
+                        </p>
+                        <a
+                          href="#"
+                          class="btn me-5 border border-2 rounded-0 accent-color text-uppercase fw-semibold p-2 px-3 read-more-btn"
+                        >
+                          read more <i class="fas fa-arrow-right ms-1"></i>
+                        </a>
+                      </div>
+                    </div>
+                    <div
+                      class="col-md-6 d-flex flex-row justify-content-center order-md-1 order-0"
+                    >
+                      <img src="./assets/images/main-banner2.jpg" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ------------------------ prev and next button ------------------------- -->
+
+      <div
+        class="w-100 position-absolute d-md-flex flex-row z-3 justify-content-between top-50 px-5 d-none"
+      >
+        <!-- ------------------------------ prev btn ------------------------------- -->
+        <button
+          class="btn rounded-circle border border-1 fs-5 switch-btn"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="prev"
+        >
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <!-- ------------------------------ next btn ------------------------------- -->
+        <button
+          class="btn rounded-circle border border-1 fs-5 switch-btn"
+          type="button"
+          data-bs-target="#carouselExampleFade"
+          data-bs-slide="next"
+        >
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- ---------------------- our client holder section ---------------------- -->
+    <section id="clientHolder" class="light-dark-bg">
+      <div class="container py-4">
+        <div class="row justify-content-center">
+          <!-- ------------------------- client image column ------------------------- -->
+          <div class="col-6 col-lg-3">
+            <img src="./assets/images/client-image1.png" alt="" />
+          </div>
+
+          <!-- ------------------------- client image column ------------------------- -->
+          <div class="col">
+            <img src="./assets/images/client-image2.png" alt="" />
+          </div>
+
+          <!-- ------------------------- client image column ------------------------- -->
+          <div class="col">
+            <img src="./assets/images/client-image3.png" alt="" />
+          </div>
+
+          <!-- ------------------------- client image column ------------------------- -->
+          <div class="col">
+            <img src="./assets/images/client-image4.png" alt="" />
+          </div>
+
+          <!-- ------------------------- client image column ------------------------- -->
+          <div class="col">
+            <img src="./assets/images/client-image5.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------- footer section ---------------------------- -->
+    <footer class="border-1 border-bottom p-5">
+      <div class="container">
+        <div class="row py-5">
+          <div class="col pe-5">
+            <img src="./assets/images/logo.png" alt="logo" class="mb-4" />
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
+              sed ptibus liberolectus nonet psryroin. Amet sed lorem posuere sit
+              iaculis amet, ac urna. Adipiscing fames semper erat ac in
+              suspendisse iaculis.
+            </p>
+          </div>
+          <div class="col">
+            <h3 class="text-black heading-font mb-4">Discover</h3>
+            <ul class="list-unstyled d-flex flex-column gap-4">
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Books</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Contact us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3 class="text-black heading-font mb-4">My Account</h3>
+            <ul class="list-unstyled d-flex flex-column gap-4">
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >My account</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Wishlist</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >View Cart</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Checkout</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h3 class="text-black heading-font mb-4">
+              Subscribe to our newsletter
+            </h3>
+
+            <form class="d-flex flex-row gap-2">
+              <input
+                type="email"
+                autocomplete="email"
+                class="form-control"
+                placeholder="Enter your email"
+              />
+              <button
+                class="btn accent-bg text-white d-flex justify-content-center align-items-center gap-2"
+              >
+                Subscribe <i class="fab fa-telegram-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ---------------------------- bottom footer ---------------------------- -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <p>
+            © 2022 All rights reserved. Made with ❤️ by
+            <a href="#" class="text-decoration-none accent-color fw-semibold"
+              >Mazen Marei</a
+            >
+            &
+            <a href="#" class="text-decoration-none accent-color fw-semibold"
+              >Mohamed Hossney</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------- Login Modal ----------------------------- -->
+    <div
+      class="modal fade"
+      id="loginAndRegisterModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <!-- --------------- Left side image for login and register ---------------- -->
+                <div class="col d-none d-lg-block">
+                  <img src="./assets/images/bg-login.jpg" alt="bgLogin" />
+                </div>
+                <!-- ------------- Right side form for login and register form ------------- -->
+                <div class="col d-flex flex-column">
+                  <!-- -------------------- modal title and close button --------------------- -->
+                  <div
+                    class="row pt-3 d-flex flex-row justify-content-between align-items-center"
+                  >
+                    <!-- Form title -->
+                    <h3 class="text-capitalize fs-4 col secondary-color">
+                      Login
+                    </h3>
+                    <button
+                      type="button"
+                      class="btn text-white fs-3 border-0 col-2 p-0"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <i class="fas fa-times p-0 secondary-color"></i>
+                    </button>
+                  </div>
+
+                  <!-- -------------------- Display if there is an error --------------------- -->
+                  <div
+                    class="row my-3 p-3 light-primary-bg rounded rounded-3 d-none"
+                    id="loginErrorMessage"
+                  >
+                    <div class="col">
+                      <strong class="dark-primary-color"
+                        >Error message here</strong
+                      >
+                    </div>
+                  </div>
+
+                  <!-- --------------------- Login Form body and inputs ---------------------- -->
+                  <div class="row my-auto">
+                    <form id="loginForm" class="needs-validation" novalidate>
+                      <!-- ----------------------------- Email Failed ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="loginEmail" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="loginEmail"
+                          placeholder="Enter email"
+                          autocomplete="email"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your email.
+                        </div>
+                        
+                      </div>
+
+                      <!-- ----------------------------- Password Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="loginPassword" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="loginPassword"
+                          placeholder="Password"
+                          autocomplete="current-password"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your password.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Login Button ----------------------------- -->
+                      <div class="row">
+                        <div class="col">
+                          <button
+                            type="submit"
+                            class="btn accent-bg w-100 text-white"
+                          >
+                            Login
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- --------------- Register Button To Open Register Modal ---------------- -->
+                      <div class="row mt-3">
+                        <div class="col justify-content-center d-flex">
+                          <p class="fw-semibold">
+                            Don't have an account?
+                            <button
+                              type="button"
+                              class="bg-transparent border-0 accent-color ms-2"
+                              data-bs-toggle="modal"
+                              data-bs-target="#registerModal"
+                            >
+                              Register
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------- Register Modal ---------------------------- -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <!-- --------------- Left side image for login and register ---------------- -->
+                <div class="col d-none d-lg-block">
+                  <img src="./assets/images/bg-register.jpg" alt="bgRegister" />
+                </div>
+                <!-- ------------- Right side form for login and register form ------------- -->
+                <div class="col d-flex flex-column">
+                  <div
+                    class="row pt-3 d-flex flex-row justify-content-between align-items-center"
+                  >
+                    <!-- -------------------- modal title and close button --------------------- -->
+                    <h3 class="text-capitalize fs-4 col secondary-color">
+                      Register
+                    </h3>
+                    <button
+                      type="button"
+                      class="btn text-white fs-3 border-0 col-2 p-0"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <i class="fas fa-times p-0 secondary-color"></i>
+                    </button>
+                  </div>
+
+                  <!-- -------------------- Display if there is an error --------------------- -->
+                  <div
+                    class="row my-3 p-3 light-primary-bg rounded rounded-3 d-none"
+                    id="registerErrorMessage"
+                  >
+                    <div class="col">
+                      <strong class="dark-primary-color"
+                        >Error message here</strong
+                      >
+                    </div>
+                  </div>
+
+                  <!-- --------------------- Register Form body and inputs ---------------------- -->
+                  <div class="row my-auto">
+                    <form id="registerForm" class="needs-validation" novalidate>
+                      <!-- ----------------------------- Name Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="registerName" class="form-label"
+                          >Full Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="registerName"
+                          placeholder="Enter name"
+                          autocomplete="name"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your Full name.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Email Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="formBasicEmail" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="formBasicEmail"
+                          placeholder="Enter email"
+                          autocomplete="email"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your email.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Password Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="registerPassword" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="registerPassword"
+                          placeholder="Password"
+                          autocomplete="new-password"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your password.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Re-Password Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="registerRePassword" class="form-label"
+                          >Confirm Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="registerRePassword"
+                          placeholder="Password"
+                          autocomplete="new-password"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your password.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Register Button ----------------------------- -->
+                      <div class="row">
+                        <div class="col">
+                          <button
+                            type="submit"
+                            class="btn accent-bg w-100 text-white"
+                          >
+                            Register
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- --------------- Login Button To Open Login Modal ---------------- -->
+                      <div class="row mt-3">
+                        <div class="col justify-content-center d-flex">
+                          <p class="fw-semibold">
+                            Already have an account?
+                            <button
+                              type="button"
+                              class="bg-transparent border-0 accent-color ms-2"
+                              data-bs-toggle="modal"
+                              data-bs-target="#loginAndRegisterModal"
+                            >
+                              Login
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -36,7 +36,7 @@ navItems.forEach((item, i) => {
 
       // ! set a timeout to 500 milliseconds to remove the class names from the nav items
       // ! if the mouse is out of the nav item and the class names are added to the nav items in the collapse effect timeout
-      
+
       setTimeout(() => removeClass.map((c) => item.classList.remove(c)), 500);
     }, 1);
   });
@@ -65,4 +65,22 @@ navItems.forEach((item, i) => {
     }
     lastNav = i;
   });
+});
+
+const forms = document.querySelectorAll(".needs-validation");
+
+// Loop over them and prevent submission
+Array.from(forms).forEach((form) => {
+  form.addEventListener(
+    "submit",
+    (event) => {      
+      if (!form.checkValidity()) {
+        event.preventDefault();
+        event.stopPropagation();          
+      }
+
+      form.classList.add("was-validated");
+    },
+    false
+  );
 });
