@@ -82,9 +82,15 @@ body {
 }
 
 /* -------------------------- important css classes ------------------------- */
-
+.body-font {
+  font-family: var(--body-font) !important;
+}
+.price-font {
+  font-family: sans-serif !important;
+  margin-top: 10px;
+}
 .heading-font {
-  font-family: var(--heading-font);
+  font-family: var(--heading-font) !important;
 }
 
 .accent-color {
@@ -150,7 +156,6 @@ body {
 .light-bg {
   background-color: var(--light-color) !important;
 }
-
 
 .nav-item-hover {
   position: relative;
@@ -250,138 +255,144 @@ body {
 }
 /* -------------------------- important css classes ------------------------- */
 
-
-
-
-
 /* ------------------------ start of hossny css code ------------------------ */
-
 
 /* --------------------------  best selling books ------------------------- */
 
-#bestSellingBooks{
-  background: #EDEBE4;
+#bestSellingBooks {
+  background: #edebe4;
   padding: 120px 0;
 }
 .product-entry {
   margin: 0;
   padding: 0;
 }
-.best-img{
+.best-img {
   display: inline-block;
-    border: 0;
-    max-width: 105%;
-    height: 500px;
-    vertical-align: middle;
+  border: 0;
+  max-width: 105%;
+  height: 500px;
+  vertical-align: middle;
 }
 #bestSellingBooks .product-entry {
-    margin-top: 50px;
-    margin-left: 8px;
+  margin-top: 50px;
+  margin-left: 8px;
 }
-
 
 .section-title {
-    font-family: "Georgia Ref";
-    font-size: 45px;
-    line-height: 1;
-    position: relative;
-    margin-bottom: 70px;
+  font-family: "Georgia Ref";
+  font-size: 45px;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 70px;
 }
 
-.customUnderline{
-  border-bottom: 3px solid rgba(102,98,47,255);
-;
+.customUnderline {
+  border-bottom: 3px solid rgba(102, 98, 47, 255);
   padding-bottom: 2px;
 }
-.author-name{
+.author-name {
   margin-bottom: 25px;
 }
-.item-title{
+.item-title {
   font-family: "Georgia Ref";
   font-weight: 500;
   margin-bottom: 25px;
 }
-.txt{
-    word-spacing: 3px; 
-    padding-bottom: 30px;
+.txt {
+  word-spacing: 3px;
+  padding-bottom: 30px;
 }
-.item-price{
+.item-price {
   font-size: 28px;
   margin-bottom: 40px;
-  color: rgba(102,98,47,255);
+  color: rgba(102, 98, 47, 255);
 }
-.shop-btn{
+.shop-btn {
   color: black;
   transition: all 0.3s ease;
 }
-.shop-btn:hover{
-  color: rgba(102,98,47,255); 
+.shop-btn:hover {
+  color: rgba(102, 98, 47, 255);
 }
-.shop-btn svg{
+.shop-btn svg {
   margin-left: 10px;
   transition: 0.6s ease;
 }
-.shop-btn:hover svg{
+.shop-btn:hover svg {
   margin-left: 19px;
   transition: 0.6s ease;
 }
 /* --------------------------  best selling books ------------------------- */
 
-
 /* --------------------------  popular books ------------------------- */
 /* --------------------------  tabs ------------------------- */
-.section-header{
+.section-header {
   position: relative;
 }
-.align-center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+
+.section-header.bg-active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-color: var(--light-dark-bg-color);
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.section-header .title span{
-  color: rgb(164, 159, 151);
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-header .title span {
+  color: rgb(164, 159, 151) !important;
   font-size: 14px;
   text-transform: uppercase;
 }
 
 .section-title {
-    font-size: 3em;
-    font-weight: 500;
-    line-height: 1;
-    position: relative;
-    margin-bottom: 75px;
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 75px;
 }
 
-.tabs{
-    list-style-image: initial;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 55px 0;
-    justify-content: center;
-    list-style: none;
+.tabs {
+  list-style-image: initial;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 55px 0;
+  justify-content: center;
+  list-style: none;
 }
 
-.tabs .tab{
+.tabs .tab {
   font-weight: 600;
   margin-right: 50px;
   cursor: pointer;
   color: rgb(124, 74, 0);
 }
-.tabs .tab.active, .tabs .tab:hover{
-  color: rgb(36 ,39, 41);
-  border-bottom: 2px solid #8A884c;
+.tabs .tab.active,
+.tabs .tab:hover {
+  color: rgb(36, 39, 41);
+  border-bottom: 2px solid #8a884c;
 }
 
-ul li, ol li {
-    margin-bottom: 5px;
-    outline: 0;
+ul li,
+ol li {
+  margin-bottom: 5px;
+  outline: 0;
 }
 /* --------------------------  tabs ------------------------- */
 
 /* --------------------------  tabs content ------------------------- */
-.tab-content{
+.tab-content {
   position: relative;
 }
 /* *,*::before,*::after{
@@ -405,30 +416,29 @@ ul li, ol li {
   display: block;
 }
 
-
 /* image */
-.product-style{
+.product-style {
   position: relative;
   overflow: hidden;
 }
-figure{
+figure {
   margin-bottom: 0;
 }
 .product-style img.product-item {
-    background-image: initial;
-    background-color: rgb(206, 204, 199);
-    border-color: rgb(201, 198, 194);
+  background-image: initial;
+  background-color: rgb(206, 204, 199);
+  border-color: rgb(201, 198, 194);
 }
 .product-style img.product-item {
-    position: relative;
-    background: #EFEEE8;
-    border: 1px solid #EAE8DF;
-    padding: 15%;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
+  position: relative;
+  background: #efeee8;
+  border: 1px solid #eae8df;
+  padding: 15%;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
 }
-img{
+img {
   display: inline-block;
   max-width: 100%;
   height: auto;
@@ -440,22 +450,22 @@ img{
 }
 
 .product-style button.add-to-cart {
-    background-image: initial;
-    background-color: rgb(24, 26, 27);
-    color: rgb(220, 218, 215);
+  background-image: initial;
+  background-color: rgb(24, 26, 27);
+  color: rgb(220, 218, 215);
 }
 .product-style button.add-to-cart {
-    position: absolute;
-    background: #000;
-    width: 100%;
-    margin: 0;
-    text-transform: uppercase;
-    text-align: center;
-    line-height: 3;
-    bottom: -65px;
-    left: 0;
-    z-index: 9;
-    transition: 0.3s ease-out;
+  position: absolute;
+  background: #000;
+  width: 100%;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 3;
+  bottom: -65px;
+  left: 0;
+  z-index: 9;
+  transition: 0.3s ease-out;
 }
 
 /* figcaption */
@@ -466,27 +476,27 @@ figcaption {
 }
 /* h3 */
 .product-item figcaption > h3 {
-    color: rgb(115, 102, 59);
-    text-align: center;
-    font-size: 1.4em;
-    margin: 0;
+  color: rgb(115, 102, 59);
+  text-align: center;
+  font-size: 1.4em;
+  margin: 0;
 }
-.product-item figcaption >span{
+.product-item figcaption > span {
   display: block;
   font-size: 18px;
   text-align: center;
 }
-.product-item figcaption>h3 {
-    font-size: 1.4em;
-    font-weight: 500;
-    margin: 0;
-    margin-top: 15px;
+.product-item figcaption > h3 {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 15px;
 }
 
 .product-item .item-price {
-    color: rgb(115, 102, 59);
-    font-size: 1.5em;
-    text-align: center;
+  color: rgb(115, 102, 59);
+  font-size: 1.5em;
+  text-align: center;
 }
 /* -------------------------- end of tabs content ------------------------- */
 
@@ -494,7 +504,7 @@ figcaption {
 .section-title.divider {
   width: 100%;
 }
-.section-title{
+.section-title {
   font-size: 3em;
   font-weight: 500;
   line-height: 1;
@@ -523,55 +533,55 @@ figcaption {
   opacity: 1;
   transform: translateY(0);
 }
-/*   -------------------------- end of fade up animation ------------------------- */ 
+/*   -------------------------- end of fade up animation ------------------------- */
 
-#quotation q{
+#quotation q {
   display: block;
   max-width: 600px; /* Limit the width of the container */
-  margin: -35px  auto; /* Center the container horizontally */
-  text-align: center; 
+  margin: -35px auto; /* Center the container horizontally */
+  text-align: center;
   line-height: 1.6; /* Adjust line height for readability */
-  font-size: 1.6em; 
+  font-size: 1.6em;
   color: #333;
   padding: 0 40px 60px 40px;
 }
 
 q::before {
-    content: open-quote;
+  content: open-quote;
 }
 q::after {
-    content: close-quote;
+  content: close-quote;
 }
-#quotation .author-name{
-    font-family: "Prata", Georgia, serif;
-    font-size: 1.4em;
+#quotation .author-name {
+  font-family: "Prata", Georgia, serif;
+  font-size: 1.4em;
 }
 /* -------------------------- end of quotation section ------------------------- */
 
-.section-header .title span{
+.section-header .title span {
   color: rgb(0, 0, 0);
   font-size: 16px;
   text-transform: uppercase;
 }
 
 #special-offer .section-header {
-    padding: 140px 0 220px;
-    margin-bottom: -235px;
-    /* z-index: -1; */
-}  
-
-.section-title {
-    font-size: 3em;
-    font-weight: 500;
-    line-height: 1;
-    position: relative;
-    margin-bottom: 75px;
+  padding: 140px 0 220px;
+  margin-bottom: -235px;
+  /* z-index: -1; */
 }
 
-span.prev-price{
+.section-title {
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 75px;
+}
+
+span.prev-price {
   color: rgb(148, 142, 133);
   text-decoration-color: initial;
-    font-size: 0.8em;
-    padding-right: 10px;
-    text-decoration: line-through;
+  font-size: 0.8em;
+  padding-right: 10px;
+  text-decoration: line-through;
 }

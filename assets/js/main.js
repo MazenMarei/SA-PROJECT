@@ -73,10 +73,10 @@ const forms = document.querySelectorAll(".needs-validation");
 Array.from(forms).forEach((form) => {
   form.addEventListener(
     "submit",
-    (event) => {      
+    (event) => {
       if (!form.checkValidity()) {
         event.preventDefault();
-        event.stopPropagation();          
+        event.stopPropagation();
       }
 
       form.classList.add("was-validated");
@@ -85,42 +85,76 @@ Array.from(forms).forEach((form) => {
   );
 });
 
+// * start of add to cart button
 
+const addToCartBtn = document.querySelectorAll(".add-to-cart");
+const cart = JSON.parse(localStorage.getItem("cart")) || {};
+const cartCount = document.getElementById("cartCount");
+cartCount.innerText = Object.keys(cart).reduce(
+  (acc, key) => acc + cart[key].quantity,
+  0
+);
+addToCartBtn.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const parent = e.target.parentElement;
+    const img = parent.querySelector("img").src;
+    const title = parent.parentElement.querySelector("h3").innerText;
+    const price = parent.parentElement
+      .querySelector(".price-font")
+      .innerText.replace("$", "");
 
+    if (cart[title]) {
+      cart[title].quantity += 1;
+    } else {
+      cart[title] = {
+        img,
+        price,
+        quantity: 1,
+      };
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    cartCount.innerText = Object.keys(cart).reduce(
+      (acc, key) => acc + cart[key].quantity,
+      0
+    );
+  });
+});
 
 // ! Start of Hossney Code
 // TABS CHANGING
 document.addEventListener("DOMContentLoaded", function () {
   // Get all the tab buttons
-    const tabs = document.querySelectorAll('.tabs .tab');
+  const tabs = document.querySelectorAll(".tabs .tab");
 
   // Add event listeners to each tab
-    tabs.forEach(tab => {
-    tab.addEventListener('click', function () {
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
       // Get the target tab content ID from the clicked tab's data attribute
-        const targetContentId = tab.getAttribute('data-tab-target');
+      const targetContentId = tab.getAttribute("data-tab-target");
       // Remove the 'active' class from all tabs and tab contents
-        tabs.forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-content > div').forEach(content => content.classList.remove('active'));
+      tabs.forEach((t) => t.classList.remove("active"));
+      document
+        .querySelectorAll(".tab-content > div")
+        .forEach((content) => content.classList.remove("active"));
       // Add the 'active' class to the clicked tab and the corresponding tab content
-        tab.classList.add('active');
-        document.querySelector(targetContentId).classList.add('active');
+      tab.classList.add("active");
+      document.querySelector(targetContentId).classList.add("active");
     });
-});
+  });
 });
 
 // FADE UP ANIMATION
-const fadeUpElements = document.querySelectorAll('.fade-up');
+const fadeUpElements = document.querySelectorAll(".fade-up");
 
 // function to check visibility
 const handleScroll = () => {
-  fadeUpElements.forEach(el => {
+  fadeUpElements.forEach((el) => {
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
-      el.classList.add('visible'); // Add the "visible" class to trigger the animation
+      el.classList.add("visible"); // Add the "visible" class to trigger the animation
     }
   });
 };
 // Run the handler on scroll and load
-window.addEventListener('scroll', handleScroll);
-window.addEventListener('load', handleScroll);
+window.addEventListener("scroll", handleScroll);
+window.addEventListener("load", handleScroll);

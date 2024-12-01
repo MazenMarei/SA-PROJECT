@@ -15,10 +15,6 @@
 
   <!-------------------- font Georgia Ref Regular--------------------->
 
-  <link
-    href="https://db.onlinewebfonts.com/c/a7a5f26f9737f4fd14b68fe9d7ff1b9b?family=Georgia+Ref"
-    rel="stylesheet"
-  />
   <body>
     <!-- --------------------------- navbar section ---------------------------- -->
 
@@ -66,11 +62,11 @@
             </li>
 
             <li>
-              <button class="btn border-0">
+              <a class="btn border-0" href="chart.html">
                 <div class="shopping-bag dark-icon-color">
                   <span id="cartCount" class="fs-6">0</span>
                 </div>
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -319,13 +315,120 @@
           </h1>
         </div>
 
-        <div class="row"></div>
+        <div class="row">
+          <div class="row">
+            <!-- first row -->
+
+            <div class="col-md-3">
+              <div class="product-item">
+                <figure class="product-style">
+                  <img
+                    src="./assets/images/popularbooks/tab-item1.jpg"
+                    alt="books"
+                    class="product-item"
+                  />
+                  <button
+                    type="button"
+                    class="add-to-cart"
+                    data-product-title="add-to-cart"
+                  >
+                    Add to cart
+                  </button>
+                </figure>
+                <figcaption>
+                  <h3 class="heading-font">Portrait Photography</h3>
+                  <span>Adam Silber</span>
+                  <div class="item-price price-font fs-5">$ 40.00</div>
+                </figcaption>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-item">
+                <figure class="product-style">
+                  <img
+                    src="./assets/images/popularbooks/tab-item2.jpg"
+                    alt="Books"
+                    class="product-item"
+                  />
+                  <button
+                    type="button"
+                    class="add-to-cart"
+                    data-product-tile="add-to-cart"
+                  >
+                    Add to Cart
+                  </button>
+                </figure>
+                <figcaption>
+                  <h3 class="heading-font">Once Upon a Time</h3>
+                  <span>Klien Marry</span>
+                  <div class="item-price price-font fs-5">$ 35.00</div>
+                </figcaption>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-item">
+                <figure class="product-style">
+                  <img
+                    src="./assets/images/popularbooks/tab-item3.jpg"
+                    alt="Books"
+                    class="product-item"
+                  />
+                  <button
+                    type="button"
+                    class="add-to-cart"
+                    data-product-tile="add-to-cart"
+                  >
+                    Add to Cart
+                  </button>
+                </figure>
+                <figcaption>
+                  <h3 class="heading-font">Tips Of Simple Lifestyle</h3>
+                  <span>Bratt Smith</span>
+                  <div class="item-price price-font fs-5">$ 40.00</div>
+                </figcaption>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="product-item">
+                <figure class="product-style">
+                  <img
+                    src="./assets/images/popularbooks/tab-item4.jpg"
+                    alt="Books"
+                    class="product-item"
+                  />
+                  <button
+                    type="button"
+                    class="add-to-cart"
+                    data-product-tile="add-to-cart"
+                  >
+                    Add to Cart
+                  </button>
+                </figure>
+                <figcaption>
+                  <h3 class="heading-font">Just Felt From Outside</h3>
+                  <span>Nicole Wilson</span>
+                  <div class="item-price price-font fs-5">$ 40.00</div>
+                </figcaption>
+              </div>
+            </div>
+          </div>
+          <hr />
+          <div class="d-flex flex-row justify-content-end">
+            <a
+              href="#"
+              class="btn me-5 border border-2 rounded-0 accent-color text-uppercase fw-semibold p-2 px-3 read-more-btn"
+            >
+              read more <i class="fas fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- -------------------------- Mazen Work <end > -------------------------- -->
-
-
 
     <!-- ---------------------------- Hossney work  <start > ----------------------------- -->
 
@@ -364,7 +467,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Inventore, exercitationem.
                   </p>
-                  <div class="item-price">$ 45.00</div>
+                  <div class="item-price price-font fs-5">$ 45.00</div>
                   <div class="btn-wrap">
                     <a
                       href="#"
@@ -391,9 +494,9 @@
           <div class="col-md-12">
             <div class="section-header align-center">
               <div class="title">
-                <span>Some qulity items</span>
+                <span class="light-text-color">Some qulity items</span>
               </div>
-              <h2 class="section-title">Popular Books</h2>
+              <h2 class="section-title text-black around-hr-line">Popular Books</h2>
             </div>
             <ul class="tabs">
               <li data-tab-target="#all-genre" class="active tab">All Genre</li>
@@ -425,9 +528,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Portrait Photography</h3>
+                        <h3 class="heading-font">Portrait Photography</h3>
                         <span>Adam Silber</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -449,9 +552,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Once Upon a Time</h3>
+                        <h3 class="heading-font">Once Upon a Time</h3>
                         <span>Klien Marry</span>
-                        <div class="item-price">$ 35.00</div>
+                        <div class="item-price price-font fs-5">$ 35.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -473,9 +576,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Tips Of Simple Lifestyle</h3>
+                        <h3 class="heading-font">Tips Of Simple Lifestyle</h3>
                         <span>Bratt Smith</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -497,9 +600,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Just Felt From Outside</h3>
+                        <h3 class="heading-font">Just Felt From Outside</h3>
                         <span>Nicole Wilson</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -523,9 +626,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Peaceful Enlightment</h3>
+                        <h3 class="heading-font">Peaceful Enlightment</h3>
                         <span>Marmik Lama</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -547,9 +650,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Great Travel At Desert</h3>
+                        <h3 class="heading-font">Great Travel At Desert</h3>
                         <span>Sanchit Howdy</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -571,9 +674,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Life Among The Pirates</h3>
+                        <h3 class="heading-font">Life Among The Pirates</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -595,9 +698,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Simple Way Of Piece Life</h3>
+                        <h3 class="heading-font">Simple Way Of Piece Life</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -623,9 +726,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Peaceful Enlightment</h3>
+                        <h3 class="heading-font">Peaceful Enlightment</h3>
                         <span>Marmik Lama</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -647,9 +750,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Great travel at desert</h3>
+                        <h3 class="heading-font">Great travel at desert</h3>
                         <span>Sanchit Howdy</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -671,9 +774,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Life among the pirates</h3>
+                        <h3 class="heading-font">Life among the pirates</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -694,9 +797,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Simple way of piece life</h3>
+                        <h3 class="heading-font">Simple way of piece life</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -722,9 +825,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Peaceful Enlightment</h3>
+                        <h3 class="heading-font">Peaceful Enlightment</h3>
                         <span>Marmik Lama</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -746,9 +849,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Great travel at desert</h3>
+                        <h3 class="heading-font">Great travel at desert</h3>
                         <span>Sanchit Howdy</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -770,9 +873,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Life among the pirates</h3>
+                        <h3 class="heading-font">Life among the pirates</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -794,9 +897,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Simple way of piece life</h3>
+                        <h3 class="heading-font">Simple way of piece life</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -821,9 +924,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Peaceful Enlightment</h3>
+                        <h3 class="heading-font">Peaceful Enlightment</h3>
                         <span>Marmik Lama</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -845,9 +948,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Great travel at desert</h3>
+                        <h3 class="heading-font">Great travel at desert</h3>
                         <span>Sanchit Howdy</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -869,9 +972,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Life among the pirates</h3>
+                        <h3 class="heading-font">Life among the pirates</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -893,9 +996,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Simple way of piece life</h3>
+                        <h3 class="heading-font">Simple way of piece life</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -921,9 +1024,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Life Among The Pirates</h3>
+                        <h3 class="heading-font">Life Among The Pirates</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -945,9 +1048,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Great Travel At Desert</h3>
+                        <h3 class="heading-font">Great Travel At Desert</h3>
                         <span>Sanchit Howdy</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -973,9 +1076,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Life Among The Pirates</h3>
+                        <h3 class="heading-font">Life Among The Pirates</h3>
                         <span>Armor Ramsey</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -997,9 +1100,9 @@
                         </button>
                       </figure>
                       <figcaption>
-                        <h3>Just Felt From Outside</h3>
+                        <h3 class="heading-font">Just Felt From Outside</h3>
                         <span>Nicole Wilson</span>
-                        <div class="item-price">$ 40.00</div>
+                        <div class="item-price price-font fs-5">$ 40.00</div>
                       </figcaption>
                     </div>
                   </div>
@@ -1030,13 +1133,17 @@
 
     <section id="special-offer" class="bookshelf pb-5 mb-5">
       <!-- header -->
-      <div class="section-header align-center">
-        <div class="title">
-          <span>Grab Your Opportunity</span>
-        </div>
-
-        <h2 class="section-title">Books with offer</h2>
-      </div>
+          <div class="section-header bg-active align-center">
+            <div class="container">
+              <div class="row">
+                <div class="title">
+                  <span>Grab Your Opportunity</span>
+                </div>
+        
+                <h2 class="section-title text-black around-hr-line">Books with offer</h2>
+              </div>
+            </div>
+          </div>
       <!-- cards -->
 
       <div class="container">
@@ -1059,11 +1166,11 @@
                   </button>
                 </figure>
                 <figcaption>
-                  <h3>Peaceful Enlightment</h3>
+                  <h3 class="heading-font">Peaceful Enlightment</h3>
                   <span>Marmik Lama</span>
-                  <div class="item-price">
-                    <span class="prev-price">$ 30.00</span>
-                    $ 40.00
+                  <div class="item-price price-font">
+                    <span class="prev-price price-font fs-5">$ 30.00</span>
+                    <span class="price-font fs-5">$ 40.00</span>
                   </div>
                 </figcaption>
               </div>
@@ -1086,10 +1193,10 @@
                   </button>
                 </figure>
                 <figcaption>
-                  <h3>Great travel at desert</h3>
+                  <h3 class="heading-font">Great travel at desert</h3>
                   <span>Sanchit Howdy</span>
-                  <div class="item-price">
-                    <span class="prev-price">$ 30.00</span>
+                  <div class="item-price price-font">
+                    <span class="prev-price price-font fs-5">$ 30.00</span>
                     $ 40.00
                   </div>
                 </figcaption>
@@ -1113,10 +1220,10 @@
                   </button>
                 </figure>
                 <figcaption>
-                  <h3>Life among the pirates</h3>
+                  <h3 class="heading-font">Life among the pirates</h3>
                   <span>Armor Ramsey</span>
-                  <div class="item-price">
-                    <span class="prev-price">$ 30.00</span>
+                  <div class="item-price price-font">
+                    <span class="prev-price price-font fs-5">$ 30.00</span>
                     $ 40.00
                   </div>
                 </figcaption>
@@ -1139,10 +1246,10 @@
                   </button>
                 </figure>
                 <figcaption>
-                  <h3>Simple way of piece life</h3>
+                  <h3 class="heading-font">Simple way of piece life</h3>
                   <span>Armor Ramsey</span>
-                  <div class="item-price">
-                    <span class="prev-price">$ 30.00</span>
+                  <div class="item-price price-font">
+                    <span class="prev-price price-font fs-5">$ 30.00</span>
                     $ 40.00
                   </div>
                 </figcaption>
@@ -1157,6 +1264,7 @@
 
     <!-- --------------------------- footer section ---------------------------- -->
     <footer class="border-1 border-bottom p-5">
+      <hr>
       <div class="container">
         <div class="row py-5">
           <div class="col pe-5">

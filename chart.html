@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOOKShelf</title>
+  </head>
+  <!-- -------------------- importing bootstrap css file --------------------- -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <!-- -------------------- importing font awesome css file --------------------- -->
+  <link rel="stylesheet" href="./assets/css/all.min.css" />
+
+  <!-- -------------------- importing custom css file --------------------- -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <body>
+    <!-- ----------------------------- top navbar ------------------------------ -->
+    <div class="container-fuild p-3 pb-0">
+      <!-- ----------------------------- top navbar ------------------------------ -->
+      <div class="row px-lg-4 border-bottom">
+        <!-- --------------------- social media icons section ---------------------- -->
+        <div class="col-6 px-lg-5">
+          <ul class="d-flex flex-row gap-4 list-unstyled">
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" class="dark-icon-color"
+                ><i class="fab fa-behance-square"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- --------------------- user and cart section ---------------------- -->
+        <div class="col-6 px-lg-5">
+          <ul class="d-flex flex-row justify-content-end gap-4 list-unstyled">
+            <li>
+              <button
+                class="btn border-0 fs-5 dark-icon-color p-0"
+                data-bs-toggle="modal"
+                data-bs-target="#loginAndRegisterModal"
+              >
+                <i class="fas fa-user"></i>
+              </button>
+            </li>
+
+            <li>
+              <a class="btn border-0">
+                <div class="shopping-bag dark-icon-color">
+                  <span id="cartCount" class="fs-6">0</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------------- bottom and main navbar ------------------------ -->
+    <nav class="container-fuild p-3 py-0 sticky-top light-bg">
+      <div class="row p-3 px-lg-5 border-bottom navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <!-- --------------------- logo section ---------------------- -->
+          <a href="index.html" class="navbar-brand">
+            <img src="./assets/images/logo.png" alt="logo" />
+          </a>
+
+          <!-- ----------------------- navbar collapse button ------------------------ -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- ---------------------------- navbar items ----------------------------- -->
+          <div>
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-uppercase fs-5">
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color active-color nav-item-hover"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Books</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Featured</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Popular</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Offer</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link body-text-color accent-color-hover nav-item-hover"
+                    href="#"
+                    >Contact us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container accent-bg"><div class="row">test</div></div>
+
+    <!-- --------------------------- footer section ---------------------------- -->
+    <footer class="border-1 border-bottom p-5">
+      <hr />
+      <div class="container">
+        <div class="row py-5">
+          <div class="col pe-5">
+            <img src="./assets/images/logo.png" alt="logo" class="mb-4" />
+            <p class="lh-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis
+              sed ptibus liberolectus nonet psryroin. Amet sed lorem posuere sit
+              iaculis amet, ac urna. Adipiscing fames semper erat ac in
+              suspendisse iaculis.
+            </p>
+          </div>
+          <div class="col">
+            <h3 class="text-black heading-font mb-4">Discover</h3>
+            <ul class="list-unstyled d-flex flex-column gap-4">
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Books</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Contact us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Terms & Conditions</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <h3 class="text-black heading-font mb-4">My Account</h3>
+            <ul class="list-unstyled d-flex flex-column gap-4">
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >My account</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Wishlist</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >View Cart</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="body-text-color text-decoration-none text-black fw-semibold"
+                  >Checkout</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col">
+            <h3 class="text-black heading-font mb-4">
+              Subscribe to our newsletter
+            </h3>
+
+            <form class="d-flex flex-row gap-2">
+              <input
+                type="email"
+                autocomplete="email"
+                class="form-control"
+                placeholder="Enter your email"
+              />
+              <button
+                class="btn accent-bg text-white d-flex justify-content-center align-items-center gap-2"
+              >
+                Subscribe <i class="fab fa-telegram-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ---------------------------- bottom footer ---------------------------- -->
+    <section>
+      <div class="container">
+        <div class="row">
+          <p>
+            © 2022 All rights reserved. Made with ❤️ by
+            <a href="#" class="text-decoration-none accent-color fw-semibold"
+              >Mazen Marei</a
+            >
+            &
+            <a href="#" class="text-decoration-none accent-color fw-semibold"
+              >Mohamed Hossney</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------- Login Modal ----------------------------- -->
+    <div
+      class="modal fade"
+      id="loginAndRegisterModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <!-- --------------- Left side image for login and register ---------------- -->
+                <div class="col d-none d-lg-block">
+                  <img src="./assets/images/bg-login.jpg" alt="bgLogin" />
+                </div>
+                <!-- ------------- Right side form for login and register form ------------- -->
+                <div class="col d-flex flex-column">
+                  <!-- -------------------- modal title and close button --------------------- -->
+                  <div
+                    class="row pt-3 d-flex flex-row justify-content-between align-items-center"
+                  >
+                    <!-- Form title -->
+                    <h3 class="text-capitalize fs-4 col secondary-color">
+                      Login
+                    </h3>
+                    <button
+                      type="button"
+                      class="btn text-white fs-3 border-0 col-2 p-0"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <i class="fas fa-times p-0 secondary-color"></i>
+                    </button>
+                  </div>
+
+                  <!-- -------------------- Display if there is an error --------------------- -->
+                  <div
+                    class="row my-3 p-3 light-primary-bg rounded rounded-3 d-none"
+                    id="loginErrorMessage"
+                  >
+                    <div class="col">
+                      <strong class="dark-primary-color"
+                        >Error message here</strong
+                      >
+                    </div>
+                  </div>
+
+                  <!-- --------------------- Login Form body and inputs ---------------------- -->
+                  <div class="row my-auto">
+                    <form id="loginForm" class="needs-validation" novalidate>
+                      <!-- ----------------------------- Email Failed ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="loginEmail" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="loginEmail"
+                          placeholder="Enter email"
+                          autocomplete="email"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your email.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Password Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="loginPassword" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="loginPassword"
+                          placeholder="Password"
+                          autocomplete="current-password"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your password.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Login Button ----------------------------- -->
+                      <div class="row">
+                        <div class="col">
+                          <button
+                            type="submit"
+                            class="btn accent-bg w-100 text-white"
+                          >
+                            Login
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- --------------- Register Button To Open Register Modal ---------------- -->
+                      <div class="row mt-3">
+                        <div class="col justify-content-center d-flex">
+                          <p class="fw-semibold">
+                            Don't have an account?
+                            <button
+                              type="button"
+                              class="bg-transparent border-0 accent-color ms-2"
+                              data-bs-toggle="modal"
+                              data-bs-target="#registerModal"
+                            >
+                              Register
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- --------------------------- Register Modal ---------------------------- -->
+    <div
+      class="modal fade"
+      id="registerModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <!-- --------------- Left side image for login and register ---------------- -->
+                <div class="col d-none d-lg-block">
+                  <img src="./assets/images/bg-register.jpg" alt="bgRegister" />
+                </div>
+                <!-- ------------- Right side form for login and register form ------------- -->
+                <div class="col d-flex flex-column">
+                  <div
+                    class="row pt-3 d-flex flex-row justify-content-between align-items-center"
+                  >
+                    <!-- -------------------- modal title and close button --------------------- -->
+                    <h3 class="text-capitalize fs-4 col secondary-color">
+                      Register
+                    </h3>
+                    <button
+                      type="button"
+                      class="btn text-white fs-3 border-0 col-2 p-0"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <i class="fas fa-times p-0 secondary-color"></i>
+                    </button>
+                  </div>
+
+                  <!-- -------------------- Display if there is an error --------------------- -->
+                  <div
+                    class="row my-3 p-3 light-primary-bg rounded rounded-3 d-none"
+                    id="registerErrorMessage"
+                  >
+                    <div class="col">
+                      <strong class="dark-primary-color"
+                        >Error message here</strong
+                      >
+                    </div>
+                  </div>
+
+                  <!-- --------------------- Register Form body and inputs ---------------------- -->
+                  <div class="row my-auto">
+                    <form id="registerForm" class="needs-validation" novalidate>
+                      <!-- ----------------------------- Name Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="registerName" class="form-label"
+                          >Full Name</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="registerName"
+                          placeholder="Enter name"
+                          autocomplete="name"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your Full name.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Email Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="formBasicEmail" class="form-label"
+                          >Email address</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="formBasicEmail"
+                          placeholder="Enter email"
+                          autocomplete="email"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your email.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Password Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="registerPassword" class="form-label"
+                          >Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="registerPassword"
+                          placeholder="Password"
+                          autocomplete="new-password"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your password.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Re-Password Field ----------------------------- -->
+                      <div class="mb-3">
+                        <label for="registerRePassword" class="form-label"
+                          >Confirm Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="registerRePassword"
+                          placeholder="Password"
+                          autocomplete="new-password"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Please Type your password.
+                        </div>
+                      </div>
+
+                      <!-- ----------------------------- Register Button ----------------------------- -->
+                      <div class="row">
+                        <div class="col">
+                          <button
+                            type="submit"
+                            class="btn accent-bg w-100 text-white"
+                          >
+                            Register
+                          </button>
+                        </div>
+                      </div>
+
+                      <!-- --------------- Login Button To Open Login Modal ---------------- -->
+                      <div class="row mt-3">
+                        <div class="col justify-content-center d-flex">
+                          <p class="fw-semibold">
+                            Already have an account?
+                            <button
+                              type="button"
+                              class="bg-transparent border-0 accent-color ms-2"
+                              data-bs-toggle="modal"
+                              data-bs-target="#loginAndRegisterModal"
+                            >
+                              Login
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------- importing bootstrap js file --------------------- -->
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- -------------------- importing font awesome js file --------------------- -->
+    <script src="./assets/js/all.min.js"></script>
+    <!-- -------------------- importing custom js file --------------------- -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
