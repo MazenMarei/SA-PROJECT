@@ -75,11 +75,15 @@ Array.from(forms).forEach((form) => {
     "submit",
     (event) => {
       if (!form.checkValidity()) {
+        form.classList.add("was-validated");
         event.preventDefault();
         event.stopPropagation();
-      }
+        if (form.id === "shippingDetailsForm") {
+          document.getElementById("shippingDetailsButton").click();
+        }
 
-      form.classList.add("was-validated");
+        return;
+      }
     },
     false
   );
@@ -87,13 +91,105 @@ Array.from(forms).forEach((form) => {
 
 // * start of add to cart button
 
+/// import cart variable from local storage or create an empty object
 const addToCartBtn = document.querySelectorAll(".add-to-cart");
 const cart = JSON.parse(localStorage.getItem("cart")) || {};
 const cartCount = document.getElementById("cartCount");
-cartCount.innerText = Object.keys(cart).reduce(
-  (acc, key) => acc + cart[key].quantity,
+const accordionChart = document.getElementById("accordionChart");
+const checkoutError = document.getElementById("checkoutError");
+const cartTotalEl = document.getElementById("cartTotal");
+
+let cartQuantity = parseInt(
+  Object.keys(cart).reduce(
+    (acc, key) => parseInt(acc) + parseInt(cart[key].quantity),
+    0
+  ),
+  10
+);
+
+if (cartCount) {
+  console.log(cartQuantity);
+
+  cartCount.innerText = cartQuantity;
+}
+
+let cartTotal = Object.keys(cart).reduce(
+  (acc, key) => acc + cart[key].quantity * cart[key].price,
   0
 );
+if (cartQuantity < 1 && accordionChart) {
+  checkoutError.classList.add("p-3");
+  checkoutError.innerText = "Your cart is empty";
+} else if (accordionChart) {
+  accordionChart.parentElement.classList.remove("d-none");
+  for (const key in cart) {
+    const { img, price, quantity } = cart[key];
+    addCartItem(key, price, img, quantity);
+    const quantityInput = document.querySelectorAll(".quantity-input");
+    quantityInput.forEach((input) => {
+      input.addEventListener("input", (e) => {
+        if (e.target.value < 1) {
+          e.target.value = 1;
+        } else {
+          const parent = e.target.parentElement.parentElement;
+          const price = parseFloat(
+            parent.querySelector(".cart-price").innerText.replace("$", "")
+          );
+          const name = parent.querySelector(".chart-item-name").innerText;
+          const quantity = e.target.value;
+          cart[name].quantity = quantity;
+          localStorage.setItem("cart", JSON.stringify(cart));
+          cartQuantity = parseInt(
+            Object.keys(cart).reduce(
+              (acc, key) => parseInt(acc) + parseInt(cart[key].quantity),
+              0
+            ),
+            10
+          );
+          cartCount.innerText = cartQuantity;
+          cartTotal = Object.keys(cart).reduce(
+            (acc, key) => acc + cart[key].quantity * cart[key].price,
+            0
+          );
+          cartTotalEl.innerText = cartTotal + " $";
+        }
+      });
+    });
+
+    const deleteCartItem = document.querySelectorAll(".delete-cart-item");
+    deleteCartItem.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const parent = e.target.parentElement.parentElement;
+        const name = parent.querySelector(".chart-item-name").innerText;
+        delete cart[name];
+        localStorage.setItem("cart", JSON.stringify(cart));
+        cartQuantity = parseInt(
+          Object.keys(cart).reduce(
+            (acc, key) => parseInt(acc) + parseInt(cart[key].quantity),
+            0
+          ),
+          10
+        );
+        cartCount.innerText = cartQuantity;
+        cartTotal = Object.keys(cart).reduce(
+          (acc, key) => acc + cart[key].quantity * cart[key].price,
+          0
+        );
+        cartTotalEl.innerText = cartTotal + " $";
+        parent.remove();
+        if (cartQuantity < 1) {
+          accordionChart.parentElement.classList.add("d-none");
+          checkoutError.classList.add("p-3");
+          checkoutError.innerText = "Your cart is empty";
+        }
+      });
+    });
+  }
+}
+
+if (cartTotalEl) {
+  cartTotalEl.innerText = cartTotal + " $";
+}
 addToCartBtn.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const parent = e.target.parentElement;
@@ -113,12 +209,50 @@ addToCartBtn.forEach((btn) => {
       };
     }
     localStorage.setItem("cart", JSON.stringify(cart));
-    cartCount.innerText = Object.keys(cart).reduce(
-      (acc, key) => acc + cart[key].quantity,
-      0
-    );
+    cartQuantity++;
+    console.log(cartQuantity);
+
+    cartCount.innerText = cartQuantity;
   });
 });
+
+function addCartItem(name, price, image, quantity) {
+  const cartTableBody = document.getElementById("cartTableBody");
+  cartTableBody.innerHTML += `<div
+class="row p-3 fw-semibold fs-6 align-items-center"
+>
+<div class="col-3 px-md-auto px-0">
+  <div
+    class="d-flex flex-column flex-md-row gap-3 align-items-center"
+  >
+    <img
+      src="${image}"
+      alt="bookImage"
+      width="90px"
+      height="100"
+      class="img-thumbnail"
+    />
+    <p class="m-0 text-nowrap chart-item-name">${name}</p>
+  </div>
+</div>
+<div class="col-3 ps-md-5">
+  <p class="m-0 cart-price">${price}$</p>
+</div>
+<div class="col-3 p-1 ">
+  <input
+    type="number"
+    class="form-control quantity-input"
+    value="${quantity}"
+    min="1"
+  />
+</div>
+<div class="col-3 text-end">
+  <button class="btn accent-bg text-white delete-cart-item">
+    Delete
+  </button>
+</div>
+</div>`;
+}
 
 // ! Start of Hossney Code
 // TABS CHANGING

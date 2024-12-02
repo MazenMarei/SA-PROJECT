@@ -255,6 +255,16 @@ body {
 }
 /* -------------------------- important css classes ------------------------- */
 
+/* ------------------------------- chart page ------------------------------- */
+
+.custom-accordion-button[aria-expanded="true"] {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+}
+.custom-accordion-button:focus {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+
 /* ------------------------ start of hossny css code ------------------------ */
 
 /* --------------------------  best selling books ------------------------- */
